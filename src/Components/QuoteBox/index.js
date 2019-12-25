@@ -3,21 +3,23 @@ import { connect } from 'react-redux';
 
 
 
-class QuoteContainer extends Component {
-    constructor() {
+
+class QuoteBox extends Component {
+    constructor(props) {
+        super(props);
+
         this.state = {
-            quotes: []
+            quote: ''
         }
     }
 
     render() {
         return (
-            <React.Fragment>
-                <p>This is the QuoteContainer!</p>
+            <React.Fragment> 
+                This is the QuoteBox!
             </React.Fragment>
         )
     }
-
 }
 
-export default QuoteContainer;
+export default QuoteBox;
