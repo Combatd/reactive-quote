@@ -28,7 +28,7 @@ class QuoteContainer extends Component {
             });
             const parsedQuotes = await quotes.json();
             this.setState({
-                quotes: parsedQuotes.data
+                quotes: parsedQuotes.quotes
             }) 
         } catch (error) {
             console.log(error);
@@ -36,11 +36,12 @@ class QuoteContainer extends Component {
     }
 
     render() {
+        console.log(this.state.quotes, "this is quotes list")
         return (
             <React.Fragment>
                 <p>This is the QuoteContainer!</p>
                 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-                <QuoteBox />
+                <QuoteBox quotes={this.state.quotes} />
             </React.Fragment>
         )
     }

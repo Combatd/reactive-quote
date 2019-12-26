@@ -9,8 +9,17 @@ class QuoteBox extends Component {
         super(props);
 
         this.state = {
-            quote: ''
+            quote: {}
         }
+    }
+
+    componentDidMount() {
+        this.getQuote();
+    }
+
+    getQuote = async () => {
+        const quotesData = this.props.quotes;
+        return quotesData[Math.floor(Math.random() * quotesData.length)];
     }
 
     render() {
