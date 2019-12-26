@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 class QuoteBox extends Component {
@@ -35,10 +35,10 @@ class QuoteBox extends Component {
                         </div>
                         <div class="buttons">
                             <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank">
-                                <i class="fa fa-twitter"></i>
+                                <FontAwesomeIcon icon={['fab', 'twitter']} />
                             </a>
                             <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
-                                <i class="fa fa-tumblr"></i>
+                               <FontAwesomeIcon icon={['fab', 'tumblr']} />
                             </a>
                             <button class="button" id="new-quote">New quote</button>
                         </div>
