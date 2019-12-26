@@ -19,7 +19,10 @@ class QuoteBox extends Component {
 
     getQuote = async () => {
         const quotesData = this.props.quotes;
-        return quotesData[Math.floor(Math.random() * quotesData.length)];
+        
+        this.setState({
+            quote: quotesData[Math.floor(Math.random() * quotesData.length)]
+        })
     }
 
     render() {
@@ -28,7 +31,7 @@ class QuoteBox extends Component {
                 <div id="wrapper">
                     <div id="quote-box">
                         <div class="quote-text">
-                            <i class="fa fa-quote-left"> </i><span id="text"></span>
+                            <i class="fa fa-quote-left"> </i> <span id="text"></span>
                         </div>
                         <div class="quote-author">
                             - <span id="author"></span>
