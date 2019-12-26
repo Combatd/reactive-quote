@@ -17,6 +17,7 @@ class QuoteContainer extends Component {
         return (
             <React.Fragment>
                 <p>This is the QuoteContainer!</p>
+                <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
                 <QuoteBox />
             </React.Fragment>
         )
